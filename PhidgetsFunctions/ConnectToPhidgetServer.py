@@ -3,6 +3,7 @@ from Phidget22.Net import *
 import time
     
 def ConnectToPhidgetServer():
+    Net.addServer("hub5000.local", "localhost", 5661, "", 0,)
 
     def setOnServerAddedHandler(self, server, kv):
         print("Server: " + str(server))
@@ -22,5 +23,4 @@ def ConnectToPhidgetServer():
     # Register for event before calling open
     net.setOnServerAddedHandler(onServerAdded)
     
-    Net.addServer("hub5000.local", "localhost", 5661, "", 0,)
 
