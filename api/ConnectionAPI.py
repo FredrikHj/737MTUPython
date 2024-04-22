@@ -1,10 +1,12 @@
+# Connection messegnes
 def ConnectionAPI():
     print()
-phidgets = {
+
+APIPhidgets = {
     "name": "Phidgets",
     "connectionLoading": False,
     "connected": False,
-    "connectionMess": "Connected",
+    "connectionState": "Disconnected",
     "conLost": False,
     "conLostMess": "Connection Lost - Retrying!",
     "backendNotFound": False,
@@ -14,11 +16,11 @@ phidgets = {
         "receivedData": {},
     },
 }
-fsuipc = {
+APIFsuipc = {
     "name": "FSUIPC",
     "connectionLoading": False,
     "connected": False,
-    "connectionMess": "Connected",
+    "connectionState": "Disconnected",
     "conLost": False,
     "conLostMess": "Connection Lost - Retrying!",
     "websocketNotFound": False,

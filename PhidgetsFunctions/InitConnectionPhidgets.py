@@ -1,10 +1,10 @@
 from Phidget22.Phidget import *
 from Phidget22.Net import *
-import time
     
-def ConnectToPhidgetServer():
+def initConnectionPhidgets():
     print("Initilaze MTU")
-
+    Net.addServer("hub5000.local", "localhost", 5661, "", 0,)
+    
     def setOnServerAddedHandler(server, kv):
         print("Server: " + str(server))
         print("Kv: " + str(kv))
@@ -23,5 +23,4 @@ def ConnectToPhidgetServer():
     # Register for event before calling open
     net.setOnServerAddedHandler(onServerAdded)
     
-    Net.addServer("hub5000.local", "localhost", 5661, "", 0,)
 
